@@ -1,15 +1,14 @@
+#we will work with the next sentence
 puts "Write a sentence"
-first_sentence = gets.chomp
-#in case you want more sentences
-#puts "Another one"
-#second_sentence = gets.chomp
+example_sentence = gets.chomp
 
 
+#Sorts it alphabetically, ignoring case and non alphanumeric.
 def word_sorting(sentence)
 	puts "#{sentence}".split.sort_by { |x| x.downcase }.join(' ').gsub(/[^0-9a-z ]/i, '')
 end
 
-word_sorting(first_sentence)
-#word_sorting(second_sentence)
+word_sorting(example_sentence)
+
 
 
